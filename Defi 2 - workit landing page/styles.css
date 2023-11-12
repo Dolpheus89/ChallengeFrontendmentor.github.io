@@ -2,22 +2,22 @@
 
 @font-face {
     font-family: frauces;
-    src: url(/starter-code/assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    src: url(./starter-code/assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
 }
 
 @font-face {
     font-family: fraucesBold;
-    src: url(/starter-code/assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf);
+    src: url(./starter-code/assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf);
 }
 
 @font-face {
     font-family: manrope;
-    src: url(/starter-code/assets/fonts/manrope/static/Manrope-Regular.ttf);
+    src: url(./starter-code/assets/fonts/manrope/static/Manrope-Regular.ttf);
 }
 
 @font-face {
     font-family: manropeLight;
-    src: url(/starter-code/assets/fonts/manrope/Manrope-VariableFont_wght.ttf);
+    src: url(./starter-code/assets/fonts/manrope/Manrope-VariableFont_wght.ttf);
 }
 
 * {
