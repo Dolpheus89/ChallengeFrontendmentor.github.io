@@ -46,6 +46,7 @@ header span {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -87,47 +88,47 @@ svg:active {
 /* background cases */
 
 .basic {
-  background-image: url(/assets/gifts/ruban.png);
+  background-image: url(assets/gifts/ruban.png);
   background-size: cover;
 }
 
 .green {
-  background-image: url(/assets/gifts/vert.png);
+  background-image: url(assets/gifts/vert.png);
   background-size: cover;
 }
 
 .special1 {
-  background-image: url(/assets/gifts/OIG1.png);
+  background-image: url(assets/gifts/OIG1.png);
   background-size: cover;
 }
 
 .special2 {
-  background-image: url(/assets/gifts/OIG3.png);
+  background-image: url(assets/gifts/OIG3.png);
   background-size: cover;
 }
 
 .cyan {
-  background-image: url(/assets/gifts/autrerubanencore.png);
+  background-image: url(assets/gifts/autrerubanencore.png);
   background-size: cover;
 }
 
 .red {
-  background-image: url(/assets/gifts/rubanrouge.png);
+  background-image: url(assets/gifts/rubanrouge.png);
   background-size: cover;
 }
 
 .white {
-  background-image: url(/assets/gifts/rubanblanc.png);
+  background-image: url(assets/gifts/rubanblanc.png);
   background-size: cover;
 }
 
 .basicred {
-  background-image: url(/assets/gifts/autreRuban.png);
+  background-image: url(assets/gifts/autreRuban.png);
   background-size: cover;
 }
 
 .redShiny {
-  background-image: url(/assets/gifts/autrerubanrouge.png);
+  background-image: url(assets/gifts/autrerubanrouge.png);
   background-size: cover;
 }
 
