@@ -1,0 +1,343 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {  background-color: #4F03AB;
+  border: solid 1px #4F03AB;
+  color: white;
+  border-radius: 10px;
+  height: 62px;
+  width: 193px;
+  text-align: center;
+
+}
+
+button:hover {
+  background-color: white;
+  color: #4F03AB;
+  cursor: pointer;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 30px;
+  margin-top: 0px;
+
+}
+
+.container h1 {
+  display: flex;
+  align-items: center;
+  font-size: 4rem;
+  text-align: left;
+
+}
+
+.container img {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.followImage {
+  visibility: hidden;
+}
+
+/* Barre de navigation */
+#NavigationPage {
+  background-color: white;
+  border-radius: 20px;
+  margin:10px auto;
+  position: sticky;
+  width: 80%;
+  top: 1px;
+  opacity: 1;
+  /* transition: opacity 0.3s ease-in-out; */
+  margin: auto;
+
+  
+
+}
+#NavigationPage.invisible {
+  opacity: 0.1;
+  transition: opacity 0.3s ease-in-out;
+  
+}
+
+#NavigationPage ul {
+  display: flex;
+  padding-inline-start: 0px;
+  box-shadow: var(--shadow);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 20px;
+}
+
+#NavigationPage ul li {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  width: 100%;
+}
+#NavigationPage ul li a {
+  color: black;
+  display: block;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+  padding: 50px 0px;
+}
+
+.right {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.left {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+#NavigationPage ul li a:hover {
+  background-color: var(--primaryColor); 
+
+}
+.left :hover {
+
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.right :hover {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+#PrincipalInformation {
+  margin-top: 500px;
+}
+#PrincipalInformation article:first-child {
+  display: flex;
+  flex-direction: row-reverse;
+  max-width: 100%;
+}
+
+.sectionSport {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-right: 10px;
+}
+.sectionNourriture {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  align-items: end;
+
+}
+
+.photo {
+  margin-top: 30px;
+  text-align: end;
+
+}
+
+
+#PrincipalInformation article:nth-child(2) {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 300px;
+}
+
+#PrincipalInformation article:nth-of-type(2) div:nth-of-type(2) {
+  margin-top: 100px;
+}
+
+.photo {
+  margin-top: 100px;
+}
+.photoUne {
+  margin-top: 100px;
+}
+#sport p {
+  max-width: 80%;
+}
+
+
+/* responsive */
+
+@media (min-width: 500px) and (max-width: 899px) {
+
+  .container {
+    padding: 0px 0px 0px 10px ;
+    margin-top: 200px;
+  }
+
+
+  .container h1 {
+    width: 30%;
+    font-size: 2rem;
+    margin-bottom: 200px;
+    margin: auto;
+    display: contents;
+    }
+
+  .container img {
+    width: 55%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin: auto;
+  }
+
+  article img:first-of-type {
+    margin: auto;
+    max-width: 50%;
+    
+  }
+
+  #sport {
+    text-align: left;
+    margin-top: 25px;
+    margin-right: 25px;
+  }
+  #nourriture {
+    text-align: right;
+  }
+  article div:nth-of-type(2) {
+    text-align: right;
+    margin-top: 25px;
+    margin-right: 25px;
+    margin-bottom: 10px;
+  }
+
+  article img:nth-of-type(2) {
+    margin: auto;
+    max-width: 50%;
+  }
+
+  #NavigationPage {
+    max-width: 50%;
+    
+
+  }
+  #NavigationPage ul {
+    
+    margin-top: 0px;
+    margin-bottom: 0px;
+   
+  }
+  .premierBouton {
+    max-width: 30%;
+  }
+   .deuxiemeBouton {
+    max-width: 30%;
+
+  } 
+  .followImage {
+    visibility: hidden;
+  }
+  #PrincipalInformation {
+    margin-top: 300px;
+  }
+  #nourriture {
+    margin-top: 200px;
+    margin-bottom: 10px;
+  }
+  .photo {
+    margin-top: 50px;
+  }
+  .photoUne {
+    margin-top: 50px;
+  }
+
+}
+
+@media (min-width:250px) and (max-width: 499px) {
+  .container img {
+    content: url('image/WhatsApp_Image_2023-11-24_at_10.49 5.png')
+  }
+
+  .container {
+    padding: 0px 0px 0px 10px ;
+    margin-top: 200px;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+
+  .container h1 {
+    position: absolute;
+    width: 80%;
+  }
+
+  #NavigationPage {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    max-width: 20%;
+    position: relative;
+    top: 0px;
+   
+  }
+  #NavigationPage ul {
+    flex-direction: column;
+  }
+  .left {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+  .left :hover {
+    border-bottom-left-radius: 0px;
+    border-top-right-radius:20px;
+  }
+  .right :hover {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+  } 
+  #PrincipalInformation {
+    margin-top: 300px;
+  }
+
+  #PrincipalInformation article:first-child {
+    display: flex;
+    flex-direction: column-reverse;
+    border-top: 20px;
+  }
+
+  #PrincipalInformation div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 25px 10px 0px 10px;
+    margin: 0px;
+
+  }
+
+  #PrincipalInformation article:nth-child(2) {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+    margin-right: 10px;
+    
+  }
+
+  #PrincipalInformation article:nth-of-type(2) div:nth-of-type(2) {
+    text-align: center;
+    margin: 25px 10px 0px 10px;
+    ;
+  }
+  .premierBouton {
+   visibility: hidden;
+  }
+   .deuxiemeBouton {
+
+    visibility: hidden;
+
+  } 
+  .followImage {
+    visibility: visible;
+  }
+
+}

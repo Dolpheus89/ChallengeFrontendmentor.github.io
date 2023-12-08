@@ -1,0 +1,104 @@
+// Fonction pour basculer l'affichage du menu déroulant
+function toggleDropdown() {
+    const dropdown = document.getElementById("myDropdown");
+    dropdown.classList.toggle("show");
+}
+
+function toggleDropdown1() {
+    const dropdown = document.getElementById("myDropdown1");
+    dropdown.classList.toggle("show");
+}
+
+function toggleDropdown2() {
+    const dropdown = document.getElementById("myDropdown2");
+    dropdown.classList.toggle("show");
+}
+
+// Ferme le menu déroulant si l'utilisateur clique en dehors de celui-ci
+window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+            const openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+function myFunction() {
+    // Code à exécuter lors du clic sur l'image
+    const displayText = "Assure-toi de faire un échauffement adéquat avant chaque séance, ce qui peut inclure 5 à 10 minutes de cardio léger suivi d'étirements dynamiques.";
+
+    // Afficher le texte dans l'élément avec l'ID "displayText"
+    document.getElementById("displayText").innerHTML = displayText;
+}
+
+const btnMaison = document.getElementById("maison")
+const btnSalle = document.getElementById("salle")
+const popupAccueil = document.getElementById("popupAccueil")
+const closePopup = document.getElementById("closePopup")
+const overlay = document.getElementById("overlay")
+const titreSeanceSalle = document.querySelector(".titreSeanceSalle")
+const titreSeanceMaison = document.querySelector(".titreSeanceMaison")
+const Maison = document.getElementById("Maison")
+const Salle = document.getElementById("Salle")
+const generateurS = document.getElementById("generateurS")
+const generateurM = document.getElementById("generateurM")
+
+const seancesFdcS = [
+    "Séance Full Body en salle:\n \n Squats barre arrière :\n• 4 séries de 8 répétitions \n\n Pompes :\n• 3 séries jusqu'à l'échec \n\n Tractions à la barre fixe (si disponible) :\n• 4 séries de 8 à 12 répétitions \n\n Développé couché avec haltères :\n• 3 séries de 12 répétitions \n\n Rowing avec barre T :\n• 3 series de 12 répétitions",
+    "Séance Full Body en salle:\n \n Soulevé de terre :\n• 4 séries de 6 à 10 répétitions \n\n Fentes avec haltères :\n• 3 séries de 12 répétitions \n\n Développé militaire avec barre :\n• 4 séries de 8 à 12 répétitions \n\n Rowing unilatéral avec haltère :\n• 3 séries de 12 répétitions\n\n Crunchs :\n• 3 séries de 15 à 20 répétitions", 
+    "Séance Full Body en salle:\n \n Squats bulgares avec haltères :\n• 4 séries de 8 à 12 répétitions\n\n Pompes en déclin (pieds sur un banc) :\n• 3 séries jusqu'à l'échec \n\n Développé incliné avec haltères :\n• 3 séries de 12 répétitions \n\n Tractions pronation :\n• 3 séries de 10 à 12 répétitions\n\n Extension triceps à la poulie haute :\n• 3 séries de 12 répétitions", 
+    "Séance Full Body en salle:\n \n Squats avec haltères :\n• 4 séries de 8 répétitions\n\n Soulevé de terre roumain :\n• 3 séries de 12 répétitions\n\n Dips entre deux chaises :\n• 4 séries de 12 à 15 répétitions\n\n Curl biceps avec barre EZ :\n• 3 séries de 12 répétitions\n\n Planche :\n• 3 séries de 30-60 secondes",
+
+]
+
+const seancesFdcM = [
+    "Séance Full Body à la maison:\n \n Squats pieds écartés :\n• 4 séries jusqu'à l'échec\n\n Fentes avant (alternance des jambes) :\n• 3 séries de 12 à 15 répétitions\n\n Squats sautés :\n• 4 séries de 8 à 12 répétitions\n\n Gainage statique :\n• 3 séries de 30-60 secondes\n\n Extensions triceps au sol :\n• 3 séries de 12 à 15 répétitions\n\n Pompes :\n• 4 séries jusqu'à l'échec\n\n Burpees :\n• 4 séries de 15 répétitions",
+    "Séance Full Body à la maison:\n \n Pistols squats (squat sur une jambe) :\n• 4 séries jusqu'à l'échec\n\n Fentes latérales (alternance des jambes) :\n• 3 séries de 12 à 15 répétitions\n\n Squats isométriques (position basse maintenue) :\n• 4 séries de 8 à 12 répétitions\n\n Planche latérale (alternance des côtés) :\n• 3 séries de 15 à 20 répétitions\n\n Crunchs inversés :\n• 3 séries de 15 à 20 répétitions\n\n Extensions triceps au-dessus de la tête :\n• 3 séries de 12 à 15 répétitions\n\n Push-ups :\n• 4 séries jusqu'à l'échec",
+    "Séance Full Body à la maison:\n \n Squats sumo (pieds écartés) :\n• 4 séries jusqu'à l'échec\n\n Fentes arrière (alternance des jambes) :\n• 3 séries de 12 à 15 répétitions\n\n Squats avec sauts latéraux :\n• 4 séries de 8 à 12 répétitions\n\n Planche dynamique :\n• 3 séries de 30-60 secondes\n\n Climbers croisés :\n• 3 séries de 15 à 20 répétitions\n\n Dips entre deux chaises :\n• 3 séries de 12 à 15 répétitions\n\n Jumping jacks :\n• 4 séries de 20 répétitions",
+    "Séance Full Body à la maison:\n \n Squats pistol alternés (squat sur une jambe) :\n• 4 séries jusqu'à l'échec\n\n Fentes latérales avec saut (alternance des jambes) :\n• 3 séries de 12 à 15 répétitions\n\n Squats isométriques avec rotation (position basse maintenue) :\n• 4 séries de 8 à 12 répétitions\n\n Planche avec rotation (alternance des côtés) :\n• 3 séries de 15 à 20 répétitions\n\n Crunchs bicyclette :\n• 3 séries de 15 à 20 répétitions\n\n Extensions triceps au-dessus de la tête :\n• 3 séries de 12 à 15 répétitions",
+]
+
+btnMaison.addEventListener ("click", () => {
+    popupAccueil.style.display = 'block';
+    overlay.style.display = 'block'
+    titreSeanceSalle.style.display = 'none'
+    titreSeanceMaison.style.display = 'block'
+    Salle.style.display = 'none'
+    Maison.style.display = 'block'
+    generateurM.style.display = 'block'
+    generateurS.style.display = 'none'
+
+})
+
+generateurM.addEventListener ('click', () => {
+    const randomSeanceM = Math.floor(Math.random() * seancesFdcM.length);
+    Maison.innerText = seancesFdcM[randomSeanceM]
+  
+})
+
+
+btnSalle.addEventListener ("click", () => {
+    popupAccueil.style.display = 'block';
+    overlay.style.display = 'block'
+    titreSeanceSalle.style.display = 'block'
+    titreSeanceMaison.style.display = 'none'
+    Maison.style.display = 'none'
+    Salle.style.display = 'block'
+    generateurM.style.display = 'none'
+    generateurS.style.display ='block'
+    
+})
+
+generateurS.addEventListener ('click', () => {
+    const randomSeanceS = Math.floor(Math.random() * seancesFdcS.length);
+    Salle.innerText = seancesFdcS[randomSeanceS]
+})
+
+closePopup.addEventListener ("click", () => {
+    popupAccueil.style.display = 'none';
+    overlay.style.display = 'none'
+})

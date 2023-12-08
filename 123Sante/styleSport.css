@@ -1,0 +1,507 @@
+header {
+    padding: 0 5% 0 5%;
+}
+
+section {
+
+    margin-left: 2%;
+    /* padding-bottom: 20%; */
+    display: flex;
+}
+
+#prog {
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 1em;
+    margin: 5% 25% 0 25%;
+    font-size: 2.5vw;
+}
+
+#imgcoureuse {
+    border: 0.75vw solid white;
+    border-radius: 50%;
+    width: 25vw;
+    height: 25vw;
+    margin: 7% 0 0 5%;
+    box-shadow: rgba(91, 91, 91, 0.3) 0px 7px 29px 0px;
+} 
+
+.title {
+    display: flex;
+    margin: 2% 0 0 20%;
+    flex-direction: column;
+    align-items: flex-end;
+
+    background-image: url(imagesheader/logo.png);
+    background-size: 55vw auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+}
+
+h1 {
+    font-size: 4.5vw;
+    margin: 20% 0 0 0;
+    padding: 0;
+
+}
+
+#design {
+    width: 18vw;
+    height: 18vw;
+}
+
+#programmes {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+}
+
+div a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+    margin: 0;
+}
+
+ a {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.text {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+.textSM {
+    font-size: 1.3rem;
+}
+
+.seance-maison{
+    display: inline-block;
+    text-align: center;
+    text-orientation: column;
+    padding-top: 20px;
+}
+
+.En-salle {
+    display: inline-block;
+    text-align: center;
+    text-orientation: column;
+    justify-content: end;
+    padding-top: 20px;
+}
+
+.seancesProg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background-color: white;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 70px;
+}
+
+.seances {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    background-color: white;
+    margin:auto;
+    width: 80%;
+}
+
+/* pop up */
+
+#maison, #salle {
+    cursor: pointer;
+}
+
+#maison:hover, #salle:hover {
+    filter: blur(2px);
+}
+
+
+#closePopup {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0);
+    width: 25px;
+    height: 25px;
+    border: none;
+}
+
+#closePopup:hover {
+    color: #FFC47E;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#popupAccueil {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 26%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 6px solid #E4D8FE;
+    border-radius: 10px;
+    padding: 2%;
+} 
+
+
+.bold {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#echauffementMaison {
+    padding: 0% 5%;
+    text-align: start;
+    font-size: 1.1rem;  
+} 
+
+#echauffementSalle {
+    padding: 0% 5%;
+    text-align: start;
+    font-size: 1.1rem;
+}
+
+.titreSeanceSalle {
+    display: none;
+    font-size: 1.8rem;
+}
+
+.titreSeanceMaison {
+    font-size: 1.8rem;
+}
+#Salle {
+    font-size: 1.2rem;
+}
+
+#Maison{
+    font-size: 1.2rem;
+}
+
+#generateurS {
+    background-color: rgba(255, 255, 255, 0);
+    width: 70px;
+    height: 50px;
+    border: none;
+    text-align: center;
+    margin-top: 10%;
+    position: relative;
+    left: 43%;
+}
+
+#generateurS:hover {
+    transition: 1s;
+    transform: scale(150%);
+    rotate: 360deg;
+}
+
+#generateurM {
+    background-color: rgba(255, 255, 255, 0);
+    width: 70px;
+    height: 50px;
+    border: none;
+    text-align: center;
+    margin-top: 10%;
+    position: relative;
+    left: 43%;
+} 
+
+#generateurM:hover {
+    /* background-color: #FFC47E; */
+    transition: 1s;
+    transform: scale(150%);
+    rotate: 360deg;
+
+}
+
+@media screen and (max-width:900px) {
+    #popupAccueil {
+        width: 50%;
+        
+    }
+    .titreSeanceMaison {
+        font-size: 1.4rem;
+    }
+    #echauffementMaison, .bold {
+        font-size: 1rem;
+      }
+    .dropbtn {
+            display: none;
+        }
+    .seances {
+        justify-content: space-around;
+    }
+    .submenu {
+        min-width: 135px;
+        position: relative;
+        right: 48%;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    .text {
+        display:none;
+    }
+
+    #myImage {
+        max-height: 98px ;
+        max-width: 98px;
+    }
+
+    #Salle, #Maison {
+        font-size: 15px;
+    }
+    #generateurS{
+        left: 42%;
+    }
+    #generateurS:hover {
+        transition: 0s;
+        transform: scale(100%);
+        rotate: 0deg;
+    }
+    #generateurM{
+        left: 42%;
+    }
+    #generateurM:hover {
+        transition: 0s;
+        transform: scale(100%);
+        rotate: 0deg;
+        }
+        .choixLieux {
+            width: 300px;
+            height: 300px;
+        }
+    
+    }
+    
+@media screen and (max-width:650px) {
+    .seances {
+        flex-wrap: wrap;
+    }
+    .choixLieux {
+        width: 50%;
+        height: 50%;
+    }
+
+    .dropdown-content1 {
+    top: 190px;
+    }
+
+    .dropdown-content2 {
+        top: 170px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    #popupAccueil{
+        width: 80%;
+    }
+    .titreSeanceMaison {
+        font-size: 1.1rem;
+    }
+    #echauffementMaison, .bold {
+        font-size: 0.9rem;
+      }
+
+      .seances{
+        flex-direction: column;
+      }
+    
+        #myDropdown {
+            top: 0px;
+            left: 80px;
+            font-size: 0.80rem;
+            position: static;
+            width: 21vw;
+        }
+
+        #myDropdown1 {
+            top: 0px;
+            right: 65px;
+            font-size: 0.80rem;
+            position: static;
+            width: 21vw;
+        }
+
+        #myDropdown2 {
+            top: 0px;
+            left: 80px;
+            font-size: 0.80rem;
+            position:static;
+            width: 21vw;
+        }
+
+        .pop-up {
+            flex-direction: column-reverse;
+
+        }
+
+        #BarreSeances {
+           margin-top: 45%;
+           width: 250px;
+        }
+
+        a{
+            text-align: start;
+            padding: 0;
+        }
+    .submenu {
+            box-shadow: rgba(99, 99, 99, 0) 0px 2px 8px 0px;
+            padding: 0px;
+            width: 50px;
+            }
+  
+    #Salle, #Maison {
+        font-size: 14px;
+    }
+    #generateurS {
+        left: 40%;
+    }
+    #generateurS:hover {
+        transition: none;
+    }
+
+    #generateurM {
+        left: 40%;
+    }
+    #generateurM:hover {
+        transition: none;
+    } 
+}
+
+#BarreSeances {
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+padding: 2% 0 ;
+}
+.pop-up {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 2%;
+    padding-top: 22%;
+    padding-bottom: 50px;
+
+}
+
+/* Style du bouton */
+.dropbtn {
+    background-color:white;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: center;
+    text-decoration: none;
+}
+.dropbtn:hover {
+    color: black;
+    background-color: rgba(100, 100, 111, 0.2);
+}
+/* Style du conteneur du menu déroulant */
+.dropdown {
+    position: relative;
+    display : flex;
+}
+
+
+
+.dropdown1 {
+    position: relative;
+    display: flex;
+}
+
+.dropdown2 {
+    position: relative;
+    display: flex; 
+}
+.submenu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #ffffff;
+    width: 145%;
+    font-size: 1rem;
+    
+}
+
+/* Style du contenu du menu déroulant (caché par défaut) */
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    /* background-color: white; */
+    top: 70px;
+    text-align: left;
+    /* padding-left: 25px; */
+}
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    /* background-color: white; */
+    top: 70px;
+    text-align: left;
+    /* padding-left: 25px; */
+}
+
+.dropdown-content3 {
+    display: none;
+    position: absolute;
+    /* background-color: white; */
+    top: 70px;
+    text-align: left;
+    /* padding-left: 25px; */
+}
+
+/* Style des liens du menu déroulant */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+/* Style des liens au survol */
+.dropdown-content a:hover {
+    background-color:#E4D8FE;
+}
+
+/* Affiche le menu déroulant lorsqu'il est ouvert */
+.show {
+    display: block;
+}
+
+#displayText {
+    background-color: #F9F5FF;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}

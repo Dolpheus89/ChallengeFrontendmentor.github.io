@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleSport.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="logoContainer">
+            <img src="assets/WhatsApp_Image_2023-11-24_at_10.49.16.png" alt="logo" id="logo">
+            <img src="assets/Ellipse 39.png" alt="logo background" id="ellipse">
+            <div class="textContainer">
+                <h2>123...Santé</h2>
+                <p>Prêt(e) à te challenger ?</p>
+            </div>
+        </div>
+        <ul id="realMenu">
+            <li class="link"><a href="index.html">Accueil</a></li>
+            <li class="link"><a href="sport.html">Séances sport</a></li>
+            <li class="link"><a href="recettes.html">Idées menu</a></li>
+            <li id="menu">◄</li>
+        </ul>
+        <ul id="hiddenMenuList">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="sport.html">Séances sport</a></li>
+            <li><a href="recettes.html">Idées menu</a></li>
+        </ul>
+    </nav>
+
+        <header>
+        <h2 id="prog">NOS PROGRAMMES</h2>
+        </header>
+        
+        <section>
+        <div class="coureuse">
+           <a href="#basdepage"><img src="imagesheader/course.jpg" alt="image coureuse" id="imgcoureuse"></a>
+        </div>
+        <div class="title">
+            <h1>Trouve ta séance en <br> 123...Cliques</h1>
+            <img src="imagesheader/design.png" alt="design sportive" id="design">
+        </div>
+        </section>
+<br>
+<br>
+<div id="BarreSeances" class="seances">
+    <div class="dropdown">
+    <button onclick="toggleDropdown('myDropdown')" class="dropbtn">Remise en forme</button>
+    <div id="myDropdown" class="dropdown-content1">
+        <div class="submenu">
+            <a href="sport.html"> Echauffement</a>
+            <a href="circuittraining.html"> Circuit Training</a>
+            <a href="abdos.html"> Abdos / Gainage</a>
+        </div>
+    </div>
+        <img src="images/abdos.png" alt="abdos" onclick="toggleDropdown('myDropdown')">
+</div>
+
+    <div class="dropdown1">
+    <button onclick="toggleDropdown1('myDropdown1')" class="dropbtn">Gain Musculaire</button>
+    <div id="myDropdown1" class="dropdown-content2">
+        <div class="submenu">
+            <a href="hautducorps.html"> Haut du corps</a>
+            <a href="basducorps.html"> Bas du corps</a>
+            <a href="fullbody.html"> Full body</a>
+        </div>
+    </div>
+    <img src=images/gainmusculaire.png alt="haltère" onclick="toggleDropdown1('myDropdown1')">
+</div>
+<div id="basdepage">
+    <div class="dropdown2">
+    <button onclick="toggleDropdown2('myDropdown2')" class="dropbtn">Perte de Poids</button>
+    <div id="myDropdown2" class="dropdown-content3">
+        <div class="submenu">
+            <a href="sport.html"> Echauffement</a>
+            <a href="crosstraining.html"> Cross Training</a>
+            <a href="running.html"> Running</a>
+        </div>
+    </div>
+    <img src=images/running.png alt="running" onclick="toggleDropdown2('myDropdown2')">
+</div>
+</div>
+</div>
+<br>
+<br>
+        <div class="text">
+            <p>Choisis une des deux options pour générer ta séance</p>
+        </div>
+     <div class="overlay" id="overlay"></div>
+    <div class="seances">
+       
+        <div class="seance-maison">
+            <img class="choixLieux" src="imagesheader/remiseenforme.png" height="400px" width="400px" alt="maison" id = "maison">
+            <p>A la maison, sans matériel</p>
+        </div>
+        
+        <div class="En-salle">
+            <img class="choixLieux"src="imagesheader/ketellbell.png" height="400px" width="400px" alt="salle" id = "salle">
+            <p>En salle de musculation</p>
+        </div>
+    </div>
+
+    <!-- Partie pop-up séances -->
+
+    <div class="overlay" id="overlay"></div>
+    <div id ="popupAccueil">
+        
+        <button id = "closePopup">x</button>
+        <h2 class="titreSeanceMaison">Séance à la maison</h2>
+        <p id = "Maison">Avant de commencer,<br><br> • Pensez à bien vous échauffer <br>• Pensez à vous hydrater </p></p>
+        <button id = "generateurM"><img src="imagesheader/haltere.png" height="50px" alt=""></button>
+        <h2 class="titreSeanceSalle">Séance en salle</h2>
+         <p id = "Salle">Avant de commencer,<br><br> • Pensez à bien vous échauffer <br>• Pensez à vous hydrater </p></p>
+         <button id = "generateurS"><img src="imagesheader/haltere.png" height="50px" alt=""></button>
+       
+    </div>
+
+    <!-- Fin partie pop-up séances -->
+
+    <div class="pop-up">
+        <img id="myImage" src="images/yoga.png" alt="Yoga-image" onclick="myFunction()">
+        <p id="displayText"></p>
+        <!-- <img src="images/yoga.png" alt="Yoga-image" id="myImage"> -->
+    </div>
+    <footer class="page-footer">
+        <li class="page-footer_team"><a href="pageteam.html">By Team</a></li>
+        <div class="social">
+            <a href="#"><img src="social/fb.png" alt="fb"></a>
+            <a href="#"><img src="social/inst.png" alt="inst"></a>
+            <a href="#"><img src="social/tw1.png" alt="twit"></a>
+        </div>
+    </footer>
+    <script src="circuittraining.js"></script>
+    <script src="index.js"></script>
+
+</body>
+</html> 

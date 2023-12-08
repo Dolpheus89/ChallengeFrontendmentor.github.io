@@ -1,0 +1,332 @@
+/* adapte new colors */
+
+:root {
+    --primaryColor: #D8ECFE;
+    --shadow: 2px 4px 4px 0px #035aab33;
+}
+
+* {
+    color: #023e77;
+}
+
+body {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 50%, rgba(245, 251, 255, 1) 50%);
+}
+
+li a:hover {
+    color: #035aab;
+}
+
+/* Top Section */
+
+
+#topSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font: var(--HeadingM);
+    margin-top: 2%;
+}
+
+#topSection h1 {
+    max-width: 550px;
+    padding-left: 20px;
+    margin: 0 auto;
+}
+
+#topSection img {
+    width: 50%;
+}
+
+/* MiddleXrap */
+
+#middleWrap {
+    opacity: 0;
+    background-color: white;
+    width: 80%;
+    margin: 0 auto 5% auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 2s;
+}
+
+#middleWrap.active {
+    opacity: 1;
+    transition: 2s;
+}
+
+#middleWrap p {
+    width: 80%;
+}
+
+/* Calculator section */
+
+#calculatorSection {
+    opacity: 0;
+    display: flex;
+    justify-content: space-around;
+    transition: 2s;
+}
+
+#calculatorSection.active {
+    opacity: 1;
+    transition: 2s;
+}
+
+#data {
+    max-width: 400px;
+    text-align: center;
+}
+
+#data .glass {
+    cursor: pointer;
+}
+
+.glass {
+    background-color: #d9d9d933;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8%;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.glass h3 {
+    margin: 2%;
+}
+
+.glass p {
+    font-size: 0.8rem;
+    width: 80%;
+}
+
+.calculatorContainer {
+    width: 300px;
+    height: 90%;
+    margin: 10% 0;
+}
+
+#regSSContainer {
+    display: flex;
+}
+
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.17rem;
+    font-weight: bold;
+    margin: 30px auto;
+    width: 90%;
+}
+
+#calculator input[type=text],
+select {
+    margin: 5% 8%;
+    width: 80%;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    background-color: white;
+}
+
+#calcul {
+    background-color: #023e77;
+    color: white;
+    border-radius: 10px;
+    width: 80%;
+    margin: 5% 8%;
+    max-width: 100px;
+    align-self: center;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+#calcul:hover {
+    background-color: white;
+    color: #023e77;
+    cursor: pointer;
+}
+
+fieldset {
+    text-align: center;
+    box-shadow: none;
+    margin: 5% 8%;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+legend {
+    margin-bottom: 5%;
+}
+
+fieldset label {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+label {
+    margin: 0 8%;
+}
+
+#result:hover {
+    cursor: default;
+}
+
+.page-footer {
+    background-color: #D8ECFE;
+    margin-bottom: -70px;
+}
+
+/* modal container */
+
+.modal-container {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: visibility 0.4s;
+}
+
+.modal-container.active {
+    visibility: visible;
+}
+
+.overlay {
+    opacity: 0;
+    position: absolute;
+    right: 30px;
+    width: 120%;
+    height: 100%;
+    background-color: #333333d3;
+    transition: opacity 0.4s 0.2s ease-out;
+}
+
+.modal-container.active .overlay {
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+}
+
+.modal {
+    opacity: 0;
+    width: 60%;
+    max-width: 500px;
+    min-width: 250px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s ease-out;
+}
+
+.modal-container.active .modal {
+    opacity: 1;
+    transition: opacity 0.4s 0.2s ease-out;
+}
+
+.close-modal {
+    padding: 0.5rem 0.6rem;
+    width: 30px;
+    height: 30px;
+    line-height: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: #ff365e;
+    color: #fff;
+}
+
+.modal h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.modal p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 5px;
+}
+
+
+@media screen and (min-width:1500px) {
+    body {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 48%, rgba(245, 251, 255, 1) 48%);
+    }
+}
+
+@media screen and (max-width:1280px) {
+    #topSection h1 {
+        font-size: 2.2rem;
+        margin-bottom: 5%;
+    }
+
+    #topSection img {}
+}
+
+@media screen and (max-width:900px) {
+
+    body {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 65%, rgba(245, 251, 255, 1) 65%);
+    }
+
+    #topSection {
+        margin: 8% auto;
+        text-align: center;
+    }
+
+    #topSection img {
+        display: none;
+    }
+
+    #middleWrap {
+        margin: 5% auto;
+    }
+
+    #calculatorSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10% auto;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    #topSection {
+        scale: 0.7;
+    }
+
+    #topSection h1 {
+        margin: 0;
+    }
+
+    .glass {
+        width: 200px;
+        margin: 8% 1%;
+    }
+}
+
+@media screen and (max-width:435px) {
+
+    html {
+        padding: 5% 0;
+    }
+}
